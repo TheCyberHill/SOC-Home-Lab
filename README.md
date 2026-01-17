@@ -53,20 +53,8 @@ This repository documents the design, deployment, and troubleshooting of a Secur
 
 Each LAN Segment is isolated and not connected to the host system.
 
-> 📸               Internet
-                       |
-                   [ WAN / NAT ]
-                       |
-                   ┌── pfSense ──┐(Used as DHCP)
-                   │             │
-          ┌────────┴──────┬──────┴────────┐
-          │                │                │
-     [ DMZ ]          [ Internal ]      [ SecOps ]   
-   (Attacker)          (Victim)      (SIEM / EDR)
-  192.168.10.0/24   192.168.20.0/24  192.168.30.0/24
-  192.168.10.1       192.168.20.1     192.168.30.1
-                                             |
-                                         [Monitor]
+
+<img width="451" height="289" alt="image" src="https://github.com/user-attachments/assets/55a50da3-190b-4ac4-b413-f5c5ee0ad118" />
 
 ---
 
